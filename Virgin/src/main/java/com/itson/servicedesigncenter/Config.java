@@ -47,9 +47,6 @@ public class Config {
   private String partnerName;
 
   public Config() {
-    System.setProperty("envFile", "/Users/ha/_WORK/_PROJECT/Evizi_AT_SAAS/Code/SDC/web_testing/ServiceDesignCenter/testng/env/qaZactMobile.json");
-    System.setProperty("hub", "qahub");
-    
     String envFile = System.getProperty("envFile");
     if (envFile == null) {
       throw new IllegalStateException("No -DenvFile=[filename] specified on command line\n");
