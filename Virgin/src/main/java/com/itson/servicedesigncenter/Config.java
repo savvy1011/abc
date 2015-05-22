@@ -51,6 +51,8 @@ public class Config {
     if (envFile == null) {
       throw new IllegalStateException("No -DenvFile=[filename] specified on command line\n");
     }
+    String workingDir = System.getProperty("user.dir").replace("/target", "");
+    envFile = workingDir + "/" + System.getProperty("envFile");
     if (envFile.isEmpty()) {
       throw new IllegalStateException("Invalid -DenvFile=[" + envFile
               + " ] specified on command line\n");
